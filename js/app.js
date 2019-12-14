@@ -7,7 +7,7 @@
         }
 
         var calculateWater = function(coffee) {
-            return Math.floor(water * ratio);
+            return Math.floor(coffee * ratio);
         }
 
         var calculateWaterBloom = function(coffee) {
@@ -25,7 +25,10 @@
 
         // event change water value
         document.getElementById('final-amount').addEventListener("keyup", function(){
-            var water = this.value
+            var water = 0;
+            if(this.value == parseInt(this.value, 10)) {
+                water = Math.abs(this.value);
+            }
             var coffee = calculateCoffe(water);
             var bloom = calculateWaterBloom(coffee);
 
@@ -34,7 +37,10 @@
 
         // event change coffe value
         document.getElementById('coffee-amount').addEventListener("keyup", function(){
-            var coffee = this.value
+            var coffee = 0;
+            if(this.value == parseInt(this.value, 10)) {
+                coffee = Math.abs(this.value);
+            }
             var water = calculateWater(coffee);
             var bloom = calculateWaterBloom(coffee);
 
