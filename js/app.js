@@ -1,4 +1,8 @@
 (function() {
+    if(localStorage.getItem("darkmode") == "true") {
+        document.getElementsByTagName('body')[0].classList.add('inverted-colors');
+    }
+
     window[window.attachEvent ? "attachEvent" : "addEventListener"](window.attachEvent ? "onload" : "load", function () {
         /* main calc functions */
         var ratio = 16; // 1/16 ratio
@@ -58,6 +62,12 @@
         // invert colors
         document.getElementById('color-invert').addEventListener("click", function(){
             document.getElementsByTagName('body')[0].classList.toggle('inverted-colors');
+
+            if(localStorage.getItem("darkmode") == "true") {
+                localStorage.setItem("darkmode", "false");
+            }else {
+                localStorage.setItem("darkmode", "true");
+            }
         });
     }, false);
 })();
