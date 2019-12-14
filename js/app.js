@@ -23,6 +23,14 @@
             document.getElementById('final-amount-info').innerHTML = water + "g";
         }
 
+        // Select input on click
+        document.getElementById('final-amount').addEventListener("click", function(){
+            this.select();
+        });
+        document.getElementById('coffee-amount').addEventListener("click", function(){
+            this.select();
+        });
+
         // event change water value
         document.getElementById('final-amount').addEventListener("keyup", function(){
             var water = 0;
