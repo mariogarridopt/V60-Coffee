@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>V60 Coffee</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="wrapper" id="app">
+            <div id="topline"></div>
+            <hr class="spacer" />
+            <div class="options-block" id="options">
+                <label for="final-amount">Final coffe amount <span class="unit">( g )</span></label>
+                <input type="number" min="150" max="900" value="450"
+                name="final-amount" id="final-amount" class="bg-gray">
+
+                <label for="coffee-amount">Coffe amount <span class="unit">( g )</span></label>
+                <input type="number" min="9" max="56" value="28"
+                name="coffee-amount" id="coffee-amount" class="bg-gray">
+            </div>
+            <div class="information-block" id="howto">
+                <h2>How to make coffee in 3 steps</h2>
+                <div class="step bg-gray">
+                    <i class="material-icons">local_drink</i>
+                    <span class="inner">Pour up to <strong id="bloom-amount-info">56g</strong> of water.</span>
+                </div>
+                <div class="step bg-gray">
+                    <i class="material-icons">pause_circle_filled</i>
+                    <span class="inner">Bloom: Wait <strong>30s</strong>.</span>
+                </div>
+                <div class="step bg-gray">
+                    <i class="material-icons">free_breakfast</i>
+                    <span class="inner">Pour over untill <strong id="final-amount-info">450g</strong> reched.</span>
+                </div>
+            </div>
+        </div>
+        <div id="color-invert">
+            <i class="medium material-icons">invert_colors</i>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/app.js"></script>
+</html>
