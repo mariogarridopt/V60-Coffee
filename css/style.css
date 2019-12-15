@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
 html{
-        font-size: 6px;
+    font-size: 6px;
 }
 
 body {
@@ -35,6 +35,10 @@ body.inverted-colors {
     top: 0;
     left: 0;
     background-color: #000;
+}
+
+.hidden {
+  display: none;
 }
 
 .inverted-colors #topline {
