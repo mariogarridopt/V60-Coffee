@@ -1,3 +1,9 @@
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/js/sw.js')
+    .then(reg => console.log('service worker registered'))
+    .catch(err => console.log('service worker not registered', err));
+}
+
 (function() {
     if(localStorage.getItem("darkmode") == "true") {
         document.getElementsByTagName('body')[0].classList.add('inverted-colors');
