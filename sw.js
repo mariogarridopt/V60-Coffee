@@ -3,7 +3,7 @@ const assets = [
   '/',
   '/index.html',
   '/css/style.css',
-  '/img/favicon.ico',
+  '/favicon.ico',
   '/img/favicon.png',
   '/img/icon-72x72.png',
   '/img/icon-96x96.png',
