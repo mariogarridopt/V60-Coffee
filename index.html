@@ -45,15 +45,18 @@
             </div>
             <div class="information-block" id="howto">
                 <h2>How to make coffee in 3 steps</h2>
+                <span class="zero-info">&nbsp;&nbsp;&nbsp;Zero your balance&nbsp;&nbsp;&nbsp;</span>
                 <div class="step bg-gray">
                     <i class="material-icons">local_drink</i>
                     <span class="inner">Pour up to <strong id="bloom-amount-info">56g</strong> of water.</span>
-                    <span class="btn to-do">Start</span>
+                    <span id="bloom-amount-timer" class="btn countdown"
+                          data-amount="56" data-unit="g" data-speed="200">Start</span>
                 </div>
                 <div class="step bg-gray">
                     <i class="material-icons">pause_circle_filled</i>
                     <span class="inner">Bloom: Wait <strong>30s</strong>.</span>
-                    <span id="countdown-btn" class="btn countdown" data-time="30">Start</span>
+                    <span id="countdown-btn" class="btn countdown"
+                          data-amount="30" data-unit="s" data-speed="1000">Start</span>
                 </div>
                 <div class="step bg-gray">
                     <i class="material-icons">free_breakfast</i>
@@ -62,8 +65,23 @@
                 </div>
             </div>
         </div>
-        <div id="color-invert">
-            <i class="medium material-icons">invert_colors</i>
+        <div class="menu-tray">
+            <div class="menu-item">
+                <i id="restart" class="material-icons" onclick="window.location.reload(false);">cached</i>
+            </div>
+            <div class="menu-item">
+                <select id="ratio-selector">
+                    <option value="14">1:14</option>
+                    <option value="15">1:15</option>
+                    <option value="16" selected>1:16</option>
+                    <option value="17">1:17</option>
+                    <option value="18">1:18</option>
+                    <option value="19">1:19</option>
+                </select>
+            </div>
+            <div class="menu-item">
+                <i id="color-invert" class="material-icons">invert_colors</i>
+            </div>
         </div>
 
         <h1 class="hidden">A Great Pour Over Coffee Brewed</h1>

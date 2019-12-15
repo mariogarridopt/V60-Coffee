@@ -49,7 +49,7 @@ body.inverted-colors {
     width: 100%;
     padding: 0;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 
 .options-block label {
@@ -83,24 +83,83 @@ body.inverted-colors {
 }
 
 .spacer {
-    height: 2vh;
+    height: 1vh;
     visibility: hidden;
 }
 
-#color-invert {
+.zero-info {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    color: #656565;
+}
+
+.zero-info:before,
+.zero-info:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #656565;
+    margin: auto;
+}
+
+.inverted-colors .zero-info {
+    color: #696969;
+}
+
+.inverted-colors .zero-info:before,
+.inverted-colors .zero-info:after {
+    border-color: #696969;
+}
+
+.menu-tray {
     position: fixed;
-    bottom: 4px;
-    right: 4px;
-    height: 32px;
-    width: 32px;
-    padding: 4px;
+    bottom: 0px;
+    right: 0px;
+    left: 0;
+    height: 50px;
+
+    background-color: #000;
+    color: #fff;
+}
+
+.inverted-colors .menu-tray {
+    background-color: #fff;
+    color: #000;
+}
+
+.menu-tray .menu-item {
+    float: left;
+    width: 30vw;
+    height: 50px;
+
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+
     cursor: pointer;
 }
 
-#color-invert i {
-    display: block;
-    font-size: 32px;
-    text-align: center;
+.menu-tray .menu-item:nth-child(2) {
+    width: 40vw;
+    line-height: 40px;
+}
+
+.menu-tray .menu-item i {
+    font-size: inherit;
+}
+
+.menu-tray .menu-item select {
+    width: 100px;
+    margin: 0 auto;
+    padding: 0px 0 0 18px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: inherit;
+}
+
+.menu-tray .menu-item select:focus{
+    outline: none;
 }
 
 .information-block {
@@ -108,7 +167,7 @@ body.inverted-colors {
 }
 
 .information-block h2 {
-    margin-top: 0px;
+    margin: 0px;
     font-size: 3rem;
     text-align: center;
 }
