@@ -1,5 +1,5 @@
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/js/sw.js')
+  navigator.serviceWorker.register('js/worker.js')
     .then(reg => console.log('service worker registered'))
     .catch(err => console.log('service worker not registered', err));
 }
@@ -14,15 +14,15 @@ if('serviceWorker' in navigator){
         var ratio = 16; // 1/16 ratio
         var calculateCoffe = function(water) {
             return Math.floor(water / ratio);
-        }
+        };
 
         var calculateWater = function(coffee) {
             return Math.floor(coffee * ratio);
-        }
+        };
 
         var calculateWaterBloom = function(coffee) {
             return Math.ceil(coffee * 2);
-        }
+        };
 
         // update values on the page
         var updateRender = function(water, coffee, bloom) {
@@ -31,7 +31,7 @@ if('serviceWorker' in navigator){
             document.getElementById('coffee-amount').value = coffee;
             document.getElementById('bloom-amount-info').innerHTML = bloom + "g";
             document.getElementById('final-amount-info').innerHTML = water + "g";
-        }
+        };
 
         // Select input on click
         document.getElementById('final-amount').addEventListener("click", function(){
