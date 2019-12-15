@@ -61,6 +61,10 @@ body.inverted-colors {
     color: #565656
 }
 
+.inverted-colors .options-block label .unit {
+  color: #afafaf
+}
+
 .options-block input {
     width: 100%;
     text-align: center;
@@ -81,8 +85,8 @@ body.inverted-colors {
 
 #color-invert {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 4px;
+    right: 4px;
     height: 32px;
     width: 32px;
     padding: 4px;
@@ -106,12 +110,47 @@ body.inverted-colors {
 }
 
 .information-block .step {
-    font-size: 2.5rem;
-    padding: 1.5vh 13%;
-    margin-bottom: 1vh;
-    border-radius: 2px;
+  position: relative;
+  font-size: 2.5rem;
+  padding: 1.5vh 1%;
+  margin-bottom: 1vh;
+  border-radius: 2px;
 }
 .information-block .step i {
     float: left;
     margin-right: 10px;
+}
+
+.information-block .step .btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 20%;
+  line-height: 6vh;
+  font-size: 2.5rem;
+  vertical-align: middle;
+}
+
+.btn.to-do,
+.btn.countdown {
+  color: #fff;
+  background-color: #171717;
+}
+
+.inverted-colors .btn.to-do,
+.inverted-colors .btn.countdown {
+  color: #000;
+  background-color: #a7a7a7;
+}
+
+.btn.done {
+  color: #000;
+  background-color: #cecece;
+}
+
+.inverted-colors .btn.done {
+  color: #fff;
+  background-color: #171717;
 }

@@ -69,5 +69,37 @@
                 localStorage.setItem("darkmode", "true");
             }
         });
+
+        // todo btn events
+        var todo_items = document.getElementsByClassName("to-do");
+        for (var i = 0; i < todo_items.length; i++) {
+          todo_items[i].addEventListener("click", function(){
+            this.classList.remove("to-do");
+            this.classList.add("done");
+            this.innerHTML = "Done!";
+          });
+        }
+
+        document.getElementById("countdown-btn").addEventListener("click", function(){
+          if(!this.classList.contains("done") && !this.classList.contains("running")) {
+            var element = this;
+            var timeleft = this.getAttribute("data-time");
+
+            element.classList.add("running");
+            element.innerHTML = timeleft + "s";
+
+            var downloadTimer = setInterval(function(){
+              timeleft -= 1;
+              element.innerHTML = timeleft + "s";
+              if(timeleft <= 0){
+                clearInterval(downloadTimer);
+                element.classList.remove("running");
+                element.classList.add("done");
+                element.innerHTML = "Done!";
+              }
+            }, 1000);
+          }
+        });
+
     }, false);
 })();
