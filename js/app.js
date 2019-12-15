@@ -80,6 +80,7 @@
           });
         }
 
+        // make btn count down the seconds
         document.getElementById("countdown-btn").addEventListener("click", function(){
           if(!this.classList.contains("done") && !this.classList.contains("running")) {
             var element = this;

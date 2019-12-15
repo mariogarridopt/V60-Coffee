@@ -133,6 +133,10 @@ body.inverted-colors {
   vertical-align: middle;
 }
 
+.btn {
+  cursor: pointer;
+}
+
 .btn.to-do,
 .btn.countdown {
   color: #fff;
